@@ -1,8 +1,70 @@
-# React + Vite
+# Product Complaint Management App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is an app where users can find the movie lists and view the details of the movie by clicking on any of them. Also, the user can give personalized star ratings to the movies that the user has already seen. After that users can add that movie to their watched-list for reviewing it later.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshots](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+### The challenge
+
+Users should be able to:
+
+- Search the movie by entering the name of the movie.
+- Click on a particular movie for viewing the movie details.
+- Give star rating to the watched movie and added to the watched list
+- View the watched movie in watched moie list and from there user can delete that movie if they want
+
+### Screenshots
+
+![Home page](./public/Home%20page.PNG)
+![Searching a movie](./public/Searching%20a%20movie.PNG)
+![Movie Details](./public/Movie%20Details.PNG)
+![Give rating to movie](./public/Give%20rating%20to%20movie.PNG)
+![Movie added to watched List](./public/Movie%20added%20to%20watchedList.PNG)
+
+### Links
+
+- Github URL: [Github Repo]()
+- Live Site URL: [Project Link]()
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- [React](https://reactjs.org/) - JS library
+- Vite with react
+- Functional Component
+- States and Props
+- useState
+- Props Drilling
+- Controlled components
+- Fetching
+- Async and Await
+- Error handling
+- useEffect
+- useEffect Cleanup function
+
+### What I learned
+
+Here, I learned more about fetching the data from the outside world using useEffect and then applying async and await functionality to achieve asynchronous programming. I used the concept of props drilling here which we can use to pass the variables of one component to its sibling components. I got to learn about controlled components, and how we can convert uncontrolled components to controlled components.
+
+## Author
+
+- Frontend Mentor - [Nitesh Chaudhary](https://www.frontendmentor.io/profile/Nitesh-bit)
+
+## Acknowledgments
+
+I would like to thanks Udemy for continuous learning. And also I would like to thanks StackOverflow and MDN as they helped me to solve mostly all my errors I encountered making this challenge.
