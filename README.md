@@ -23,7 +23,7 @@ Users should be able to:
 - Search the movie by entering the name of the movie.
 - Click on a particular movie for viewing the movie details.
 - Give star rating to the watched movie and added to the watched list
-- View the watched movie in watched moie list and from there user can delete that movie if they want
+- View the watched movie in watched movie list and from there user can delete that movie if they want
 
 ### Screenshots
 
@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Github URL: [Github Repo]()
-- Live Site URL: [Project Link]()
+- Github URL: [Github Repo](https://github.com/Nitesh-bit/useMovie)
+- Live Site URL: [Project Link](https://usemovie12.netlify.app/)
 
 ## My process
 
