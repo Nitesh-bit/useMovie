@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 
 export default function Search({ query, setQuery }) {
@@ -9,20 +10,23 @@ export default function Search({ query, setQuery }) {
   //   el.focus();
   // }, []);
 
-  useEffect(function () {
-    function callback(e) {
-      if (document.activeElement === inputEl.current) return;
+  useEffect(
+    function () {
+      function callback(e) {
+        if (document.activeElement === inputEl.current) return;
 
-      if (e.code === "Enter") {
-        inputEl.current.focus();
-        setQuery("");
+        if (e.code === "Enter") {
+          inputEl.current.focus();
+          setQuery("");
+        }
       }
-    }
-    inputEl.current.focus();
-    document.addEventListener("keydown", callback);
+      inputEl.current.focus();
+      document.addEventListener("keydown", callback);
 
-    return () => document.addEventListener("keydown", callback);
-  }, []);
+      return () => document.addEventListener("keydown", callback);
+    },
+    [setQuery]
+  );
 
   return (
     <input
