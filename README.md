@@ -24,6 +24,7 @@ Users should be able to:
 - Click on a particular movie for viewing the movie details.
 - Give star rating to the watched movie and added to the watched list
 - View the watched movie in watched movie list and from there user can delete that movie if they want
+- view the watched movie even after loading
 
 ### Screenshots
 
@@ -36,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Github URL: [Github Repo](https://github.com/Nitesh-bit/useMovie)
-- Live Site URL: [Project Link](https://usemovie12.netlify.app/)
+- Live Site URL: [Project Link](https://usemovie-12.netlify.app/)
 
 ## My process
 
@@ -56,10 +57,12 @@ Users should be able to:
 - Error handling
 - useEffect
 - useEffect Cleanup function
+- Local Storage
+- useRef
 
 ### What I learned
 
-Here, I learned more about fetching the data from the outside world using useEffect and then applying async and await functionality to achieve asynchronous programming. I used the concept of props drilling here which we can use to pass the variables of one component to its sibling components. I got to learn about controlled components, and how we can convert uncontrolled components to controlled components.
+Here, I learned more about fetching data from the outside world using useEffect and applying async and await functionality to achieve asynchronous programming. I used the concept of prop drilling here, which we can use to pass the variables of one component to its sibling components. I learned about controlled components and how we can convert uncontrolled components to controlled ones. A new concept was introduced here, which I have learned, and that is local storage. I store users' watched movies in local storage, and on refresh, the watched movies will still be there on a new load.
 
 ## Author
 
@@ -67,4 +70,4 @@ Here, I learned more about fetching the data from the outside world using useEff
 
 ## Acknowledgments
 
-I would like to thanks Udemy for continuous learning. And also I would like to thanks StackOverflow and MDN as they helped me to solve mostly all my errors I encountered making this challenge.
+I would like to thanks Udemy for continuous learning. And also I would like to thanks ChatGPT and MDN as they helped me to solve mostly all my errors I encountered making this challenge.

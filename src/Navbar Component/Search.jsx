@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef } from "react";
 
-export default function Search({ query, setQuery }) {
+export default function Search({ query = "", setQuery }) {
   const inputEl = useRef(null);
 
   // useEffect(function () {
@@ -33,7 +33,7 @@ export default function Search({ query, setQuery }) {
       className="search"
       type="text"
       placeholder="Search movies..."
-      value={query}
+      value={query || ""}
       onChange={(e) => setQuery(e.target.value)}
       ref={inputEl}
     />

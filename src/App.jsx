@@ -23,7 +23,7 @@ export default function App() {
   // const [watched, setWatched] = useState([]);
   const [watched, setWatched] = useState(function () {
     const storedValue = localStorage.getItem("watched");
-    return JSON.parse(storedValue);
+    return storedValue ? JSON.parse(storedValue) : [];
   });
   // const tempQuery = "interstellar";
 
@@ -52,7 +52,7 @@ export default function App() {
   }
 
   function handleAddWatchMovie(movie) {
-    setWatched((watched) => [...watched, movie]);
+    setWatched((prevWatched) => [...prevWatched, movie]);
     // localStorage.setItem("watched", JSON.stringify([...watched, movie]));
   }
 
@@ -129,7 +129,7 @@ export default function App() {
         <Box>
           {/* {isLoading ? <Loader /> : <MovieList movies={movies} />} */}
           {isLoading && <Loader />}
-          {!isLoading && !error && (
+          {!isLoading && !error && movies && (
             <MovieList movies={movies} onSelectMovie={handleSelectMovie} />
           )}
           {error && <ErrorMessage message={error} />}

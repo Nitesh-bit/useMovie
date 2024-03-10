@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import Loader from "../Utitlity Component/Loader";
 import StarRating from "../StarRating";
@@ -13,11 +14,11 @@ export default function MovieDetails({
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
 
-  const isWatched = watched.map((movie) => movie.imdbID).includes(selectedId);
+  const isWatched =
+    watched && watched.map((movie) => movie.imdbID).includes(selectedId);
 
-  const watchedUserRating = watched.find(
-    (movie) => movie.imdbID === selectedId
-  )?.userRating;
+  const watchedUserRating =
+    watched && watched.find((movie) => movie.imdbID === selectedId)?.userRating;
 
   const {
     Title: title,
@@ -76,7 +77,7 @@ export default function MovieDetails({
       }
       getMovieDetails();
     },
-    [selectedId]
+    [selectedId, KEY]
   );
 
   useEffect(
@@ -92,7 +93,7 @@ export default function MovieDetails({
         //why?.😜 because of Closure
       };
     },
-    [movie]
+    [movie, title]
   );
 
   return (

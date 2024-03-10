@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export default function WatchedMovie({ movie, onDeleteWatched }) {
   return (
     <li key={movie.imdbID}>

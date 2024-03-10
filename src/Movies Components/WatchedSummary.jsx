@@ -1,14 +1,17 @@
+/* eslint-disable react/prop-types */
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
 
 export default function WatchedSummary({ watched }) {
-  const avgImdbRating = average(
-    watched.map((movie) => movie.imdbRating)
-  ).toFixed(2);
-  const avgUserRating = average(
-    watched.map((movie) => movie.userRating)
-  ).toFixed(2);
-  const avgRuntime = average(watched.map((movie) => movie.runtime)).toFixed(2);
+  const avgImdbRating = watched
+    ? average(watched.map((movie) => movie.imdbRating)).toFixed(2)
+    : 0;
+  const avgUserRating = watched
+    ? average(watched.map((movie) => movie.userRating)).toFixed(2)
+    : 0;
+  const avgRuntime = watched
+    ? average(watched.map((movie) => movie.runtime)).toFixed(2)
+    : 0;
 
   return (
     <div className="summary">
@@ -16,7 +19,7 @@ export default function WatchedSummary({ watched }) {
       <div>
         <p>
           <span>#️⃣</span>
-          <span>{watched.length} movies</span>
+          <span>{watched ? watched.length : 0} movies</span>
         </p>
         <p>
           <span>⭐️</span>
