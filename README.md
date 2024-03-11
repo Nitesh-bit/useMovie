@@ -1,4 +1,4 @@
-# Product Complaint Management App
+# useMovie App
 
 This is an app where users can find the movie lists and view the details of the movie by clicking on any of them. Also, the user can give personalized star ratings to the movies that the user has already seen. After that users can add that movie to their watched-list for reviewing it later.
 
